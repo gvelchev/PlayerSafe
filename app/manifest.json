@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "PlayerSafe",
+    "version": "0.0.1",
+    "description": "This extension gives an possibility to skip part of video in the HTML5 player",
+    "icons": {
+        "16": "images/16x16.png",
+        "19": "images/19x19.png",
+        "32": "images/32x32.png",
+        "48": "images/48x48.png",
+        "64": "images/64x64.png",
+        "128": "images/128x128.png"
+    },
+    "browser_action": {
+        "default_icon": "images/128x128.png",
+        "default_title": "PlayerSafe"
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "notifications",
+        "*://www.netflix.com/*"],
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": ["*://www.netflix.com/*"],
+            "js": ["js/frameworks/require.js", "js/frameworks/require-cs.js", "js/router.js"]
+        }],
+    "web_accessible_resources": ["js/content/netflix.js"]
+}
