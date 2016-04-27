@@ -5,7 +5,6 @@
     "description": "This extension gives an possibility to skip part of video in the HTML5 player",
     "icons": {
         "16": "images/16x16.png",
-        "19": "images/19x19.png",
         "32": "images/32x32.png",
         "48": "images/48x48.png",
         "64": "images/64x64.png",
